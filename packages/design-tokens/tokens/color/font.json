@@ -1,0 +1,15 @@
+{
+  "color": {
+    "font": {
+      "base": {
+        "value": "{color.base.black.value}"
+      },
+      "secondary": {
+        "value": "{color.base.pink.value}"
+      },
+      "tertiary": {
+        "value": "{color.base.blue.value}"
+      }
+    }
+  }
+}

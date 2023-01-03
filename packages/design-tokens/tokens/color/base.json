@@ -1,0 +1,24 @@
+{
+  "color": {
+    "base": {
+      "green": {
+        "value": "#05502A"
+      },
+      "blue": {
+        "value": "#1A589F"
+      },
+      "pink": {
+        "value": "#F7E6EB"
+      },
+      "yellow": {
+        "value": "#FFDD9D"
+      },
+      "black": {
+        "value": "#222222"
+      },
+      "white": {
+        "value": "FFFFFF"
+      }
+    }
+  }
+}
