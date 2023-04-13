@@ -22,6 +22,28 @@ export type ButtonProps = Exclude<ChakraButtonProps, "colorScheme" | "size" | "v
  *
  * Løsninger som skal se ut som en del av [kartverket.no](http://kartverket.no) skal bruke grønn.
  */
+
+const renderIcon = (
+  isLoading: boolean | undefined,
+  icon: (React.ReactElement<any, string | React.JSXElementConstructor<any>> & "string") | undefined
+) => {
+  if (isLoading && icon) {
+    return (
+      <Box visibility="hidden" aria-hidden="true">
+        <div className="material-symbols-outlined">{icon}</div>
+      </Box>
+    );
+  }
+
+  if (icon) {
+    return (
+      <Center>
+        <div className="material-symbols-outlined">{icon}</div>
+      </Center>
+    );
+  }
+};
+
 export const Button = forwardRef<ButtonProps, "button">(
   (
     {
@@ -48,30 +70,21 @@ export const Button = forwardRef<ButtonProps, "button">(
         aria-busy={isLoading}
         position="relative"
       >
-        {isLoading && leftIcon ? (
-          <Box visibility={isLoading ? "hidden" : "visible"} aria-hidden="true">
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </Box>
-        ) : (
-          <Center paddingRight={1}>
-            <span className="material-symbols-outlined">{leftIcon}</span>
-          </Center>
-        )}
+        {renderIcon(isLoading, leftIcon)}
         {isLoading && (
           <Center position="absolute" right="0" left="0">
             <Spinner size="sm" />
           </Center>
         )}
-        <Box visibility={isLoading ? "hidden" : "visible"}>{children}</Box>
-        {isLoading && rightIcon ? (
-          <Box visibility={isLoading ? "hidden" : "visible"} aria-hidden="true">
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </Box>
-        ) : (
-          <Center paddingLeft={1}>
-            <span className="material-symbols-outlined">{rightIcon}</span>
-          </Center>
-        )}
+        <Box
+          className="text"
+          visibility={isLoading ? "hidden" : "visible"}
+          paddingLeft={leftIcon && 1}
+          paddingRight={rightIcon && 1}
+        >
+          {children}
+        </Box>
+        {renderIcon(isLoading, rightIcon)}
       </ChakraButton>
     );
   }
