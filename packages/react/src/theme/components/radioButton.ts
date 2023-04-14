@@ -3,11 +3,13 @@ import { defineStyleConfig } from "@chakra-ui/react";
 
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
-    color: `${colorScheme}.500`,
-    // cursor: "pointer",
-    backgroundColor: `${colorScheme}.500`,
-    _hover: {
-      color: `${colorScheme}.400`,
+    control: {
+      color: "blue",
+      backgroundColor: "white",
+      _hover: {
+        color: `${colorScheme}.700`,
+      },
+      _focus: {},
     },
   }),
 });
