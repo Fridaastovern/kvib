@@ -1,4 +1,68 @@
 export const colors = {
+  // Kartverksfarger
+  textColors: {
+    black_100: "#222222",
+    black_80: "#505050",
+    black_50: "#707070",
+  },
+  BackgroundColors: {
+    green_10: "#E9F4EC",
+    blue_10: "#E4F1F8",
+    yellow_10: "#FCF1E8",
+    yellow_20: "#FCEBCF",
+    red_20: "#F7E6EB",
+    black_10: "#F5F2F2",
+    white_00: "#ffffff",
+  },
+  buttonColors: {
+    green_80: "#156630",
+    green_50: "#1A833B",
+    green_100: "#05502A",
+    blue_50: "#1A589F",
+    blue_30: "#439CCD",
+    blue_100: "#213060",
+  },
+  supportColors: {
+    red_100: "#A32F00",
+    red_50: "#D04A14",
+    red_10: "#F7E6EB",
+    yellow_50: "#FFDD9D",
+    green_20: "#D0ECD6",
+  },
+  errorColors: {
+    red_100: "#A32F00",
+    yellow_10: "#FCF1E8",
+  },
+  informationColors: {
+    blue_50: "#1A589F",
+    blue_10: "#E4F1F8",
+  },
+  successColors: {
+    green_80: "#156630",
+    green_10: "#E9F4EC",
+  },
+  alertColors: {
+    yellow_50: "#FFDD9D",
+    yellow_20: "#FCEBCD",
+  },
+  logoColors: {
+    green_50: "#1A833B",
+    blue_50: "#1A589F",
+    white_00: "#FFFFFF",
+  },
+  testsupportColors: {
+    red: {
+      100: "#FFFF2F",
+      50: "#B2FF2F",
+      10: "#F22F2F",
+    },
+    yellow: {
+      50: "#FFDD9D",
+    },
+    green: {
+      20: "#FFDD9D",
+    },
+  },
   gray: {
     50: "#F5F2F2",
     100: "#F0EDED",
