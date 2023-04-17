@@ -3,15 +3,24 @@ import { defineStyleConfig } from "@chakra-ui/react";
 
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
-    control: {
-      color: "blue",
-      backgroundColor: "white",
+    container: {
       _hover: {
-        color: `${colorScheme}.700`,
+        "input:enabled + .chakra-radio__control": {
+          backgroundColor: "white",
+          borderColor: `${colorScheme}.700`,
+        },
+        "input:enabled:checked + .chakra-radio__control": {
+          color: "darkTeal",
+        },
       },
-      _focus: {},
     },
   }),
+  sizes: {
+    lg: {
+      fontSize: "40px",
+      backgroundColor: "yellow",
+    },
+  },
 });
 
 export default config;

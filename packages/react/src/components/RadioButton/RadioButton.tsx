@@ -1,4 +1,5 @@
 import { forwardRef, Radio as ChakraRadioButton, RadioProps as ChakraRadioButtonProps } from "@chakra-ui/react";
+// import {RadioButton as RadioButtonTheme} from "../../theme/components";
 
 export type RadioButtonProps = Exclude<ChakraRadioButtonProps, "colorScheme" | "size" | "variant"> & {
   // variant?: "primary" | "secondary" | "tertiary";
@@ -6,5 +7,5 @@ export type RadioButtonProps = Exclude<ChakraRadioButtonProps, "colorScheme" | "
   colorScheme?: "blue" | "green";
 };
 export const RadioButton = forwardRef<ChakraRadioButtonProps, "input">((props, ref) => {
-  return <ChakraRadioButton {...props} ref={ref}></ChakraRadioButton>;
+  return <ChakraRadioButton ref={ref} {...props}></ChakraRadioButton>;
 });
