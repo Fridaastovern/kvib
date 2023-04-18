@@ -5,7 +5,7 @@ export const colors = {
     black_80: "#505050",
     black_50: "#707070",
   },
-  BackgroundColors: {
+  backgroundColors: {
     green_10: "#E9F4EC",
     blue_10: "#E4F1F8",
     yellow_10: "#FCF1E8",
@@ -50,19 +50,7 @@ export const colors = {
     blue_50: "#1A589F",
     white_00: "#FFFFFF",
   },
-  testsupportColors: {
-    red: {
-      100: "#FFFF2F",
-      50: "#B2FF2F",
-      10: "#F22F2F",
-    },
-    yellow: {
-      50: "#FFDD9D",
-    },
-    green: {
-      20: "#FFDD9D",
-    },
-  },
+  //resten
   gray: {
     50: "#F5F2F2",
     100: "#F0EDED",

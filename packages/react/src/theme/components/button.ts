@@ -47,22 +47,22 @@ const config = defineStyleConfig({
       _hover: {
         backgroundColor: `${colorScheme}.400`,
         _disabled: {
-          color: colors.gray[600],
-          backgroundColor: colors.gray[50],
+          color: colors.textColors["black_80"],
+          backgroundColor: colors.backgroundColors["black_10"],
         },
       },
       _active: {
         backgroundColor: `${colorScheme}.600`,
-        boxShadow: `${colors.blue[600]} 0 0 0 2px inset, ${colors.blue[600]} 0 0 0 2px inset,
+        boxShadow: `${colors.blue[600]} 0 0 0 2px inset, ${colors.buttonColors["blue_100"]} 0 0 0 2px inset,
           ${colors.white} 0 0 0 4px inset`,
         _disabled: {
-          color: colors.gray[600],
-          backgroundColor: colors.gray[50],
+          color: colors.textColors["black_80"],
+          backgroundColor: colors.backgroundColors["black_10"],
           boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
         },
       },
       _disabled: {
-        backgroundColor: colors.gray[50],
+        backgroundColor: colors.backgroundColors["black_10"],
         boxShadow: `${colors.gray[600]} 0 0 0 1px inset`,
       },
       _loading: {
