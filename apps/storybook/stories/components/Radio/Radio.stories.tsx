@@ -1,9 +1,9 @@
-import { RadioButton, RadioButtonProps } from "@kvib/react/src/components/RadioButton/RadioButton";
+import { Radio, RadioProps } from "@Kvib/react/src/components/Radio/Radio";
 import { StoryFn, Meta } from "@storybook/react";
 
-const meta: Meta<typeof RadioButton> = {
+const meta: Meta<typeof Radio> = {
   title: "Komponenter/RadioKnapper",
-  component: RadioButton,
+  component: Radio,
   parameters: {
     docs: {
       story: { inline: true },
@@ -46,10 +46,10 @@ const meta: Meta<typeof RadioButton> = {
 
 export default meta;
 
-const Template: StoryFn<RadioButtonProps> = (args) => {
+const Template: StoryFn<RadioProps> = (args) => {
   const { children } = args;
 
-  return <RadioButton {...args}>{children}</RadioButton>;
+  return <Radio {...args}>{children}</Radio>;
 };
 
 export const Default = Template.bind({});
