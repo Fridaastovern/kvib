@@ -3,14 +3,15 @@ import { defineStyleConfig } from "@chakra-ui/react";
 
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
+    ".radio__ikon": {
+      color: `${colorScheme}.700`,
+      position: "relative",
+      left: "-20px",
+    },
     container: {
       _hover: {
         "input:enabled + .chakra-radio__control": {
-          backgroundColor: "white",
-          borderColor: `${colorScheme}.700`,
-        },
-        "input:enabled:checked + .chakra-radio__control": {
-          color: "darkTeal",
+          color: `${colorScheme}.700`,
         },
       },
     },

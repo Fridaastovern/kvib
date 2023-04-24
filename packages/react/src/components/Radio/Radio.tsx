@@ -6,5 +6,10 @@ export type RadioProps = Exclude<ChakraRadioProps, "colorScheme" | "size" | "var
   colorScheme?: "blue" | "green";
 };
 export const Radio = forwardRef<ChakraRadioProps, "input">((props, ref) => {
-  return <ChakraRadio ref={ref} {...props}></ChakraRadio>;
+  return (
+    <>
+      <ChakraRadio ref={ref} {...props}></ChakraRadio>
+      <span className="radio__ikon material-symbols-outlined">radio_button_checked</span>
+    </>
+  );
 });
