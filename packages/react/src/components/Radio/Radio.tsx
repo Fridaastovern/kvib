@@ -1,15 +1,17 @@
 import { forwardRef, Radio as ChakraRadio, RadioProps as ChakraRadioProps } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 
-export type RadioProps = Exclude<ChakraRadioProps, "colorScheme" | "size" | "variant"> & {
-  // variant?: "primary" | "secondary" | "tertiary";
+export type RadioProps = Exclude<ChakraRadioProps, "colorScheme" | "size"> & {
   size?: "sm" | "md" | "lg";
   colorScheme?: "blue" | "green";
 };
-export const Radio = forwardRef<ChakraRadioProps, "input">((props, ref) => {
+
+export const Radio = forwardRef<RadioProps, typeof Input>(({ children, colorScheme, size, ...props }, ref) => {
   return (
     <>
-      <ChakraRadio ref={ref} {...props}></ChakraRadio>
-      <span className="radio__ikon material-symbols-outlined">radio_button_checked</span>
+      <ChakraRadio colorScheme={colorScheme} size={size} ref={ref} {...props}>
+        {children}
+      </ChakraRadio>
     </>
   );
 });

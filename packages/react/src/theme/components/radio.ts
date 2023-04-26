@@ -1,27 +1,35 @@
 import { defineStyleConfig } from "@chakra-ui/react";
-// import {colors} from "../foundations";
 
 const config = defineStyleConfig({
   baseStyle: ({ colorScheme }) => ({
-    ".radio__ikon": {
-      color: `${colorScheme}.700`,
-      position: "relative",
-      left: "-20px",
-    },
     container: {
+      ".chakra-radio__control": {
+        width: "16px",
+        height: "1rem",
+        // ^hvis jeg setter begge disse til 1rem blir stylingen ødelagt. Rart^
+        color: `${colorScheme}.500`,
+        borderColor: `${colorScheme}.500`,
+        backgroundColor: "white",
+        _before: {
+          height: "0.5rem",
+          width: "0.5rem",
+        },
+        _hover: {
+          backgroundColor: "white",
+        },
+      },
       _hover: {
-        "input:enabled + .chakra-radio__control": {
-          color: `${colorScheme}.700`,
+        ".chakra-radio__control": {
+          borderColor: `${colorScheme}.400`,
+          color: `${colorScheme}.400`,
         },
       },
     },
-  }),
-  sizes: {
-    lg: {
-      fontSize: "40px",
-      backgroundColor: "yellow",
+    control: {
+      color: `${colorScheme}.400`,
+      backgroundColor: "white",
     },
-  },
+  }),
 });
 
 export default config;
